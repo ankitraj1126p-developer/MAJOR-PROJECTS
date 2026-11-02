@@ -1,0 +1,105 @@
+
+
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-4">
+    <div class="col-8 offset-2">
+
+        <h2 class="mb-4">Listing Details</h2>
+
+        <!-- Listing Card -->
+        <div class="card shadow-sm">
+
+            <!-- Image -->
+            <% if (listing.image && listing.image.url) { %>
+
+                <img
+                    src="<%= listing.image.url %>"
+                    class="card-img-top"
+                    alt="listing image"
+                    style="height: 350px; object-fit: cover;"
+                >
+
+            <% } else { %>
+
+                <div
+                    class="d-flex align-items-center justify-content-center bg-secondary text-white"
+                    style="height: 350px;"
+                >
+                    No Image Available
+                </div>
+
+            <% } %>
+
+
+            <!-- Card Body -->
+            <div class="card-body">
+
+                <h3 class="card-title mb-3">
+                    <%= listing.title || "Untitled Listing" %>
+                </h3>
+
+                <p class="card-text">
+                    <strong>Description:</strong>
+                    <%= listing.description || "No description available." %>
+                </p>
+
+                <p class="card-text">
+                    <strong>Price:</strong>
+                    ₹
+                    <%= listing.price != null
+                        ? Number(listing.price).toLocaleString('en-IN')
+                        : 'N/A'
+                    %>
+                    / night
+                </p>
+
+                <p class="card-text">
+                    <strong>Location:</strong>
+                    <%= listing.location || "Location not available" %>
+                </p>
+
+                <p class="card-text">
+                    <strong>Country:</strong>
+                    <%= listing.country || "Country not available" %>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="mt-4">
+
+            <a
+                href="/listings/<%= listing._id %>/edit"
+                class="btn btn-dark"
+            >
+                Edit 
+            </a>
+
+
+            <form
+                method="POST"
+                action="/listings/<%= listing._id %>?_method=DELETE"
+                class="d-inline"
+            >
+
+                <button
+                    type="submit"
+                    class="btn btn-danger ms-2"
+                >
+                    Delete 
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+

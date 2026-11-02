@@ -1,0 +1,118 @@
+body{
+    font-family: "Jakarta Sans", sans-serif important;
+    display: flex;
+    flex-direction:column;
+    min-height:100vh ;
+}
+
+.container{
+  flex: 1;
+}
+
+.navbar{
+  height:5rem;
+  background-color: white;
+}
+
+.fa-truck{
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link{
+
+  color:#222222 !important;
+
+}
+
+
+.f-info-links a{
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover{
+  text-decoration: underline;
+  
+}
+
+.f-info-links{
+  width:100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.f-info-socials{
+  width: 100%;
+   align-items: center;
+  display: flex;
+  justify-content: center;
+ 
+
+}
+.f-info-socials i{
+  margin-right: 0.75rem;
+   font-size: 1.3rem;
+}
+
+.f-in{
+  display: flex;
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+}
+
+.card{
+
+  border:none important;
+  margin-bottom: 2rem;
+
+}
+
+.card-img-top{
+  border-radius: 1rem important;
+  width: 100% important;
+  object-fit:cover important;
+}
+
+.card-body{
+  padding:0 important;
+}
+
+.card-text p{
+
+  font-weight: 400;
+
+}
+
+.listing-link{
+  text-decoration:none ;
+
+}
+
+.card-img-overlay{
+  opacity:0 ;
+
+}
+
+
+.card-img-overlay:hover{
+  opacity:0.2 ;
+  background-color: white;
+
+}
+
+.show-image{
+
+
+  height: 30vh;
+  
+
+
+}
+
+
+ 
